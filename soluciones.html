@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Soluciones y Desarrollo | Inversiones Hasbun</title>
+  <meta name="description" content="Desarrollo de Software, Páginas Web, Sistemas de Ventas y Soporte Técnico en Sicuani." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Estilos Base Hasbun */
+    :root {
+        --hasbun-blue: #0056b3; 
+        --hasbun-red: #D32F2F;
+        --hasbun-dark: #3a3a3a;
+        --hasbun-light: #f8f9fa;
+    }
+
+    .text-primary-custom { color: var(--hasbun-blue) !important; }
+    .bg-primary-custom { background-color: var(--hasbun-blue) !important; }
+    
+    .btn-primary-custom {
+        background-color: var(--hasbun-blue) !important;
+        color: white !important;
+        border: 1px solid var(--hasbun-blue) !important;
+    }
+
+    /* Hero específico para Soluciones (Más tecnológico) */
+    .hero-solutions {
+        background: linear-gradient(rgba(0, 30, 60, 0.9), rgba(0, 30, 60, 0.85)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+    }
+
+    /* Tarjetas de Servicio */
+    .solution-card {
+        border: none;
+        border-radius: 10px;
+        transition: 0.3s;
+        background: white;
+        height: 100%;
+        overflow: hidden;
+    }
+    .solution-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    }
+    
+    .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+    .icon-web { background: rgba(0, 86, 179, 0.1); color: var(--hasbun-blue); }
+    .icon-desktop { background: rgba(211, 47, 47, 0.1); color: var(--hasbun-red); }
+    .icon-net { background: rgba(58, 58, 58, 0.1); color: var(--hasbun-dark); }
+
+    /* Timeline del Proceso */
+    .step-circle {
+        width: 50px;
+        height: 50px;
+        background-color: var(--hasbun-blue);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin: 0 auto 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: #0056b3;">
+    <div class="container">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+        <div class="d-flex align-items-center justify-content-center bg-white rounded shadow-sm" style="width: 40px; height: 40px; padding: 5px;">
+           <img src="img/logo.png" onerror="this.style.display='none'" alt="H" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <span class="text-white" style="font-size: 1.1rem;">INVERSIONES HASBUN</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="index.html" style="color: rgba(255,255,255,0.9) !important;">Inicio</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" style="color: white !important;">Servicios</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item" href="seguridad.html">Seguridad</a></li>
+              <li><a class="dropdown-item" href="equipos.html">Equipos</a></li>
+              <li><a class="dropdown-item active" href="soluciones.html">Soluciones</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto" style="color: rgba(255,255,255,0.9) !important;">Contacto</a></li>
+        </ul>
+        <div class="d-flex ms-3">
+            <a href="https://wa.me/51975927108" class="btn d-flex align-items-center gap-2 btn-sm rounded-pill px-3 fw-bold" style="background-color: white; color: #0056b3;">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-solutions text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold mb-3">Digitaliza tu Negocio</h1>
+        <p class="lead mb-4 opacity-75">Desde una página web profesional hasta sistemas de escritorio para controlar tus ventas. Creamos software a tu medida.</p>
+        <a href="#software" class="btn btn-primary-custom btn-lg rounded-pill px-4 me-2">Ver Servicios</a>
+        <a href="https://wa.me/51975927108" class="btn btn-outline-light btn-lg rounded-pill px-4">Agendar Reunión</a>
+    </div>
+  </section>
+
+  <section id="software" class="py-5 bg-light">
+      <div class="container">
+          <div class="text-center mb-5">
+              <h6 class="text-primary-custom fw-bold text-uppercase ls-1">Desarrollo de Software</h6>
+              <h2 class="fw-bold">Potencia tu empresa con tecnología</h2>
+          </div>
+
+          <div class="row g-4 justify-content-center">
+              
+              <div class="col-lg-5 col-md-6">
+                  <div class="card solution-card shadow-sm p-4">
+                      <div class="d-flex align-items-center mb-3">
+                          <div class="icon-wrapper icon-web me-3 mb-0">
+                              <i class="fa-solid fa-globe"></i>
+                          </div>
+                          <h3 class="fw-bold mb-0">Desarrollo Web</h3>
+                      </div>
+                      <p class="text-muted">Tu negocio necesita estar visible las 24 horas. Diseñamos sitios modernos, rápidos y adaptables a celulares.</p>
+                      
+                      <ul class="list-unstyled mb-4 small text-secondary">
+                          <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Páginas Corporativas / Landing Pages</li>
+                          <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Catálogos Virtuales</li>
+                          <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Correos Corporativos</li>
+                      </ul>
+                      
+                      <a href="https://wa.me/51975927108?text=Me%20interesa%20una%20Pagina%20Web" class="btn btn-outline-primary w-100 rounded-pill mt-auto">Cotizar Web</a>
+                  </div>
+              </div>
+
+              <div class="col-lg-5 col-md-6">
+                  <div class="card solution-card shadow-sm p-4 border-start border-4 border-danger">
+                      <div class="d-flex align-items-center mb-3">
+                          <div class="icon-wrapper icon-desktop me-3 mb-0">
+                              <i class="fa-solid fa-desktop"></i>
+                          </div>
+                          <h3 class="fw-bold mb-0">Sistemas de Escritorio</h3>
+                      </div>
+                      <p class="text-muted">Software instalado localmente para un control rápido y robusto de tus operaciones diarias sin depender de internet.</p>
+                      
+                      <ul class="list-unstyled mb-4 small text-secondary">
+                          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Sistemas de Ventas (Punto de Venta)</li>
+                          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Control de Inventarios y Almacén</li>
+                          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Gestión de Restaurantes/Negocios</li>
+                      </ul>
+                      
+                      <a href="https://wa.me/51975927108?text=Me%20interesa%20un%20Sistema%20a%20medida" class="btn btn-outline-danger w-100 rounded-pill mt-auto">Cotizar Sistema</a>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+  </section>
+
+  <section class="py-5 bg-white">
+      <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                  <h2 class="fw-bold mb-4">Soporte e Infraestructura</h2>
+                  <p class="text-muted">No solo creamos software, mantenemos tus equipos funcionando.</p>
+                  
+                  <div class="d-flex mb-3">
+                      <i class="fa-solid fa-network-wired fa-2x text-primary-custom me-3 mt-1"></i>
+                      <div>
+                          <h5 class="fw-bold">Redes y Cableado</h5>
+                          <p class="small text-muted">Instalación de cableado estructurado, configuración de Routers y ampliación de señal WiFi.</p>
+                      </div>
+                  </div>
+
+                  <div class="d-flex mb-3">
+                      <i class="fa-solid fa-screwdriver-wrench fa-2x text-primary-custom me-3 mt-1"></i>
+                      <div>
+                          <h5 class="fw-bold">Soporte Técnico Empresarial</h5>
+                          <p class="small text-muted">Mantenimiento preventivo y correctivo para flotas de computadoras en oficinas y colegios.</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 text-center">
+                  <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="img-fluid rounded shadow-lg" alt="Soporte TI">
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="py-5 bg-light text-center">
+      <div class="container">
+          <h2 class="fw-bold mb-5">¿Cómo desarrollamos tu proyecto?</h2>
+          <div class="row g-4">
+              <div class="col-md-4">
+                  <div class="step-circle">1</div>
+                  <h5 class="fw-bold">Análisis</h5>
+                  <p class="text-muted small">Nos reunimos contigo para entender qué problema necesitas resolver en tu negocio.</p>
+              </div>
+              <div class="col-md-4">
+                  <div class="step-circle">2</div>
+                  <h5 class="fw-bold">Desarrollo</h5>
+                  <p class="text-muted small">Programamos tu solución web o de escritorio, mostrándote avances reales.</p>
+              </div>
+              <div class="col-md-4">
+                  <div class="step-circle">3</div>
+                  <h5 class="fw-bold">Implementación</h5>
+                  <p class="text-muted small">Instalamos el software, capacitamos a tu personal y te damos garantía.</p>
+              </div>
+          </div>
+          <div class="mt-5">
+            <a href="https://wa.me/51975927108?text=Quiero%20iniciar%20un%20proyecto" class="btn btn-primary-custom rounded-pill px-5 py-2 fw-bold shadow">
+                ¡Empecemos Ahora!
+            </a>
+          </div>
+      </div>
+  </section>
+
+  <footer id="contacto" class="pt-5 pb-3 bg-dark text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">Inversiones Hasbun SRL</h5>
+            <div class="d-flex gap-3">
+                <a href="#" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h6 class="fw-bold mb-3">Contacto</h6>
+            <p class="small text-white-50 mb-1"><i class="fa-solid fa-location-dot me-2"></i> JR Garcilaso de la Vega 123</p>
+            <p class="small text-white-50 mb-1"><i class="fa-brands fa-whatsapp me-2"></i> +51 975 927 108</p>
+        </div>
+      </div>
+      <hr class="border-secondary my-4 opacity-25" />
+      <p class="text-center small text-white-50">© 2025 Inversiones Hasbun SRL.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
