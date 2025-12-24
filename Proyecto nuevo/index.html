@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Inversiones Hasbun - Tecnología, Seguridad y Soluciones</title>
+  <meta name="description" content="Soluciones confiables. Venta de equipos, cámaras de seguridad, redes y soporte técnico en Sicuani." />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+  /* FORZAR COLOR AZUL HASBUN */
+  :root {
+      --hasbun-blue: #0056b3; 
+      --hasbun-dark: #3a3a3a;
+  }
+
+  /* Botones personalizados */
+  .btn-primary-custom {
+      background-color: var(--hasbun-blue) !important;
+      color: white !important;
+      border: 1px solid var(--hasbun-blue) !important;
+  }
+  
+  .text-primary-custom {
+      color: var(--hasbun-blue) !important;
+  }
+
+  /* Sobrescribir el azul de Bootstrap */
+  .text-primary { color: var(--hasbun-blue) !important; }
+  .btn-primary { background-color: var(--hasbun-blue) !important; border-color: var(--hasbun-blue) !important; }
+
+  /* Efecto Hover para tarjetas */
+  .service-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  }
+</style>
+</head>
+
+<body>
+  <header class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: #0056b3;">
+    <div class="container">
+      
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#">
+        <div class="d-flex align-items-center justify-content-center bg-white rounded shadow-sm" style="width: 50px; height: 50px; padding: 5px;">
+           <img src="img/logo.png" onerror="this.style.display='none'" alt="H" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+
+        <div class="d-flex flex-column">
+          <span style="line-height: 1; color: white; font-size: 1.1rem;">INVERSIONES HASBUN</span>
+          <span style="font-size: 0.7rem; font-style: italic; font-weight: 400; color: #f0f0f0;">Soluciones Tecnológicas</span>
+        </div>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border-color: rgba(255,255,255,0.5);">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#" style="color: white !important;">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros" style="color: rgba(255,255,255,0.9) !important;">Quiénes Somos</a></li>
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" style="color: rgba(255,255,255,0.9) !important;">Servicios</a>
+            <ul class="dropdown-menu border-0 shadow">
+              <li><a class="dropdown-item" href="seguridad.html">Seguridad</a></li>
+              <li><a class="dropdown-item" href="equipos.html">Equipos</a></li>
+              <li><a class="dropdown-item" href="soluciones.html">Soluciones</a></li>
+            </ul>
+          </li>
+          
+          <li class="nav-item"><a class="nav-link" href="#testimonios" style="color: rgba(255,255,255,0.9) !important;">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto" style="color: rgba(255,255,255,0.9) !important;">Contacto</a></li>
+        </ul>
+
+        <form class="d-flex ms-lg-3 mt-2 mt-lg-0" role="search" id="formularioBusqueda">
+          <div class="input-group">
+            <input class="form-control form-control-sm border-0" type="search" id="inputBusqueda" placeholder="Buscar..." style="background: rgba(255,255,255,0.2); color: white;">
+            <button class="btn btn-sm" type="submit" style="background: rgba(255,255,255,0.2); color: white;">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="d-flex ms-3">
+          <a href="https://wa.me/51975927108" target="_blank" class="btn d-flex align-items-center gap-2 btn-sm rounded-pill px-3 fw-bold" style="background-color: white; color: #0056b3;">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section d-flex align-items-center" style="background: linear-gradient(135deg, #0056b3 0%, #002a5c 100%); color: white; min-height: 80vh;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 py-5">
+          <h1 class="display-4 fw-bold mb-3" style="color: white;">
+            Tecnología y Seguridad para tu tranquilidad.
+          </h1>
+          <p class="lead mb-4" style="color: rgba(255, 255, 255, 0.9);">
+            En Inversiones Hasbun brindamos soluciones integrales: desde equipos de cómputo hasta sistemas de seguridad avanzados.
+          </p>
+          <div class="d-flex gap-3 flex-column flex-md-row">
+            <a href="#contacto" class="btn btn-light btn-lg shadow fw-bold" style="color: #0056b3;">Cotizar ahora</a>
+            <a href="https://wa.me/51975927108" class="btn btn-outline-light btn-lg"><i class="fa-brands fa-whatsapp"></i> Consultar</a>
+          </div>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block text-center">
+          <img src="img/hero-tech.png" alt="Tecnología Hasbun" class="img-fluid rounded-4 shadow-lg" style="border: 4px solid rgba(255,255,255,0.2);" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5 mb-5">
+        <div class="col-lg-6">
+          <h6 class="text-primary-custom fw-bold text-uppercase ls-1">Sobre Nosotros</h6>
+          <h2 class="mb-4 fw-bold">Una empresa, soluciones reales.</h2>
+          <p class="text-muted">En Inversiones Hasbun nos enfocamos en lo que realmente necesitas: tecnología funcional y seguridad garantizada.</p>
+          <ul class="check-list mt-4 ps-0 list-unstyled">
+            <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i> Atención experta en Sicuani</li>
+            <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i> Soporte técnico especializado</li>
+            <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i> Garantía en todos nuestros equipos</li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+           <div class="about-img-container shadow rounded-4 overflow-hidden">
+             <img src="img/equipo.png" onerror="this.src='https://placehold.co/600x400'" class="img-fluid w-100" alt="Equipo Hasbun">
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center mt-5">
+        <div class="col-12 mb-4">
+          <h4 class="fw-bold">Nuestro Equipo</h4>
+          <p class="text-muted">Profesionales a tu servicio.</p>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="team-member bg-white p-4 rounded shadow-sm h-100 border">
+             <img src="img/francito.JPG" onerror="this.src='https://randomuser.me/api/portraits/men/32.jpg'" class="rounded-circle mb-3 border border-4 border-light shadow-sm" width="100" height="100" alt="Miembro 1">
+            <h5 class="fw-bold text-primary-custom mb-1">Fran Solis Navarro</h5>
+            <p class="small text-muted fw-bold text-uppercase mb-2">Operaciones</p>
+            <p class="text-muted small">Experto en hardware y seguridad electrónica.</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="team-member bg-white p-4 rounded shadow-sm h-100 border">
+             <img src="https://randomuser.me/api/portraits/men/85.jpg" class="rounded-circle mb-3 border border-4 border-light shadow-sm" width="100" height="100" alt="Miembro 2">
+            <h5 class="fw-bold text-primary-custom mb-1">[Nombre 2]</h5>
+            <p class="small text-muted fw-bold text-uppercase mb-2">Desarrollo y Soluciones</p>
+            <p class="text-muted small">Especialista en sistemas y redes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h6 class="text-primary-custom fw-bold text-uppercase ls-2">Lo que hacemos</h6>
+        <h2 class="fw-bold mb-3">Nuestros Servicios</h2>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100 border-0 shadow-sm text-center p-4">
+            <div class="icon-wrapper mb-3 text-primary-custom">
+              <i class="fa-solid fa-shield-halved fa-3x"></i>
+            </div>
+            <h5 class="fw-bold">Seguridad</h5>
+            <p class="text-muted small">Cámaras, alarmas, cercos y monitoreo.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100 border-0 shadow-sm text-center p-4">
+            <div class="icon-wrapper mb-3 text-warning">
+              <i class="fa-solid fa-laptop fa-3x"></i>
+            </div>
+            <h5 class="fw-bold">Equipos</h5>
+            <p class="text-muted small">Laptops, PCs, periféricos y accesorios.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card service-card h-100 border-0 shadow-sm text-center p-4">
+            <div class="icon-wrapper mb-3 text-dark">
+              <i class="fa-solid fa-network-wired fa-3x"></i>
+            </div>
+            <h5 class="fw-bold">Soluciones</h5>
+            <p class="text-muted small">Consultoría, redes, soporte y software.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios" class="py-5">
+    <div class="container py-4">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">Lo que dicen nuestros clientes</h2>
+            <p class="text-muted">La confianza es nuestra mejor carta de presentación.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="text-warning small me-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="fw-bold small">Empresa Local</span>
+                    </div>
+                    <p class="text-muted fst-italic">"Inversiones Hasbun instaló todo el sistema de cámaras en mi negocio. Muy profesionales y limpios en su trabajo."</p>
+                    <footer class="blockquote-footer mt-2">Cliente Satisfecho</footer>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="text-warning small me-2">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="fw-bold small">Usuario Particular</span>
+                    </div>
+                    <p class="text-muted fst-italic">"Compré una laptop y me asesoraron muy bien sobre cuál elegir. El servicio post-venta es excelente."</p>
+                    <footer class="blockquote-footer mt-2">Cliente Satisfecho</footer>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="cta-section py-5 text-white text-center" style="background: var(--hasbun-dark);">
+    <div class="container">
+      <h2 class="display-6 fw-bold mb-3">¿Listo para mejorar tu tecnología?</h2>
+      <p class="lead mb-4 text-white-50">Cotiza hoy mismo.</p>
+      <a href="https://wa.me/51975927108" class="btn btn-primary-custom btn-lg rounded-pill px-5">Hablar por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer id="contacto" class="pt-5 pb-3 bg-dark text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">Inversiones Hasbun SRL</h5>
+            <p class="text-white-50 small">Soluciones informáticas integrales.</p>
+            <div class="d-flex gap-3">
+                <a href="#" class="text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <h6 class="fw-bold mb-3">Contacto</h6>
+            <p class="small text-white-50 mb-1"><i class="fa-solid fa-location-dot me-2"></i> JR Garcilaso de la Vega 123, Sicuani</p>
+            <p class="small text-white-50 mb-1"><i class="fa-brands fa-whatsapp me-2"></i> +51 975 927 108</p>
+        </div>
+      </div>
+      <hr class="border-secondary my-4 opacity-25" />
+      <p class="text-center small text-white-50">© 2025 Inversiones Hasbun SRL.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Script de búsqueda ajustado a los nuevos servicios
+    document.getElementById('formularioBusqueda').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const busqueda = document.getElementById('inputBusqueda').value.toLowerCase();
+      if (busqueda.includes('camara') || busqueda.includes('seguridad')) { window.location.href = 'seguridad.html'; }
+      else if (busqueda.includes('equipo') || busqueda.includes('laptop')) { window.location.href = 'equipos.html'; }
+      else if (busqueda.includes('soluciones') || busqueda.includes('redes')) { window.location.href = 'soluciones.html'; }
+      else if (busqueda.includes('contacto')) { window.location.href = '#contacto'; }
+      else { alert('Prueba buscar "seguridad", "equipos" o "soluciones".'); }
+    });
+  </script>
+</body>
+</html>
